@@ -27,7 +27,7 @@
 </nav>
 </head>
 
-
+		
 <body>
 	<div class="banner">
 		<img src="style/img/baner.png">
