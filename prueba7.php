@@ -325,6 +325,7 @@ a {
 
   .navbar {
     display: none;
+    color: #fff;
   }
 
   .badge {
@@ -1827,8 +1828,6 @@ button.bg-dark:focus {
 .custom-select {
     transition: none;
   }
-}
-
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -1887,7 +1886,7 @@ button.bg-dark:focus {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #1abc9c;
+  background-color: #bbbbbb;
 }
 
 .nav-fill .nav-item {
@@ -1900,7 +1899,6 @@ button.bg-dark:focus {
   flex-grow: 1;
   text-align: center;
 }
-
 .tab-content > .tab-pane {
   display: none;
 }
@@ -2275,6 +2273,7 @@ button.bg-dark:focus {
 
 
 
+
   </style>
   <script type="text/javascript">
   	 (function($) {
@@ -2360,7 +2359,7 @@ button.bg-dark:focus {
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Mi tienda</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Contacto</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Carrito</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-1 px-lg-3 rounded js-scroll-trigger" href=""><form class="form-inline">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href=""><form class="form-inline">
   									<a class="navbar-brand">Busqueda</a>
   									<form class="form-inline">
     								<input type="search" placeholder="Search" aria-label="Search">
