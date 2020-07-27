@@ -29,10 +29,6 @@
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contacto</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"> <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-                        </li>
-
-                       
                     </ul>
                 </div>
             </div>
@@ -55,10 +51,28 @@
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0">EsloganEsloganEsloganEsloganEslogan</p>
             </div>
         </header>
- 
-       
-       
-        <footer class="footer text-center">
+        
+
+        <!--ACERCA DENOSOTROS-->
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block text-gray">Acerca de nosotros</h2>
+                </div>
+              
+
+                <!-- Seccion acerca de-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <p class="pre-wrap lead">texto texto texto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto texto .</p>
+                    </div>
+                    <div class="col-lg-4 mr-auto">
+                        <p class="pre-wrap lead">texto texto texto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto texto !</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+          <footer class="footer text-center">
             <div class="container">
                 <div class="row">
                     <!-- pie de pagina locacion-->
@@ -74,18 +88,22 @@
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in"><i class="fab fa-fw fa-linkedin-in"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/"><i class="fab fa-fw fa-instagram"></i></a>
                     </div>
-                    <!-- pie de paghina texto-->
+                   
+                    <!-- PIE DE PAGINA DEL TEXTO-->
                     <div class="col-lg-4">
-                        <h4 class="mb-4">ABOUT FREELANCER</h4>
+                        <h4 class="mb-4">CONTACTO</h4>
                         <p class="pre-wrap lead mb-0">Contacto foñhgerhgophah</p>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- Copyright Section-->
+
+        <!-- Seccion derechos reservados -->
         <section class="copyright py-4 text-center text-white">
             <div class="container"><small class="pre-wrap">Copyright © Avatrade_PicodiRoma 2020</small></div>
         </section>
+
+
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
         <!-- Bootstrap core JS-->

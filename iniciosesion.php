@@ -29,10 +29,6 @@
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contacto</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"> <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-                        </li>
-
-                       
                     </ul>
                 </div>
             </div>
@@ -55,9 +51,69 @@
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0">EsloganEsloganEsloganEsloganEslogan</p>
             </div>
         </header>
- 
-       
-       
+                     <div class="overlay">
+<!-- LOGN IN FORM by Omar Dsoky -->
+<form>
+   <!--   con = Container  for items in the form-->
+   <div class="con">
+   <!--     Start  header Content  -->
+   <header class="head-form">
+      <h2>Log In</h2>
+      <!--     A welcome message or an explanation of the login form -->
+      <p>login here using your username and password</p>
+   </header>
+   <!--     End  header Content  -->
+   <br>
+   <div class="field-set">
+     
+      <!--   user name -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   user name Input-->
+         <input class="form-input" id="txt-input" type="text" placeholder="@UserName" required>
+     
+      <br>
+     
+           <!--   Password -->
+     
+      <span class="input-item">
+        <i class="fa fa-key"></i>
+       </span>
+      <!--   Password Input-->
+      <input class="form-input" type="password" placeholder="Password" id="pwd"  name="password" required>
+     
+<!--      Show/hide password  -->
+     <span>
+        <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+     </span>
+     
+     
+      <br>
+<!--        buttons -->
+<!--      button LogIn -->
+      <button class="log-in"> Log In </button>
+   </div>
+  
+<!--   other buttons -->
+   <div class="other">
+<!--      Forgot Password button-->
+      <button class="btn submits frgt-pass">Forgot Password</button>
+<!--     Sign Up button -->
+      <button class="btn submits sign-up">Sign Up 
+<!--         Sign Up font icon -->
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+      </button>
+<!--      End Other the Division -->
+   </div>
+     
+<!--   End Conrainer  -->
+  </div>
+  
+  <!-- End Form -->
+</form>
+</div>
+
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
@@ -67,7 +123,7 @@
                         <p class="pre-wrap lead mb-0">paseo de la reforma fgjhagfg</p>
                     </div>
                     <!-- pie de paginaiconos -->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="mb-4">AROUND THE WEB</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/"><i class="fab fa-fw fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com"><i class="fab fa-fw fa-twitter"></i></a>

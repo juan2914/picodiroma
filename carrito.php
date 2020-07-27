@@ -29,10 +29,6 @@
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contacto</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"> <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-                        </li>
-
-                       
                     </ul>
                 </div>
             </div>
@@ -55,9 +51,75 @@
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0">EsloganEsloganEsloganEsloganEslogan</p>
             </div>
         </header>
- 
-       
-       
+
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Galeria seccion dela cabecera-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Galeria</h2>
+                </div>
+                <!-- Lineas divisoras-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Imagenes de la galeria-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                  <!-- Imagenes -->
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="style/img/picopico.png" alt="Log Cabin"/>
+                        </div>
+                    </div>
+                   
+                    
+                
+        </section>
+
+
+        <!-- seccion de la venta-->
+        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Titulo de la mercancia</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="style/img/picopico.png" alt="Log Cabin"/>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+        
+        
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+               
+
+
+
+     
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
@@ -67,7 +129,7 @@
                         <p class="pre-wrap lead mb-0">paseo de la reforma fgjhagfg</p>
                     </div>
                     <!-- pie de paginaiconos -->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="mb-4">AROUND THE WEB</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/"><i class="fab fa-fw fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com"><i class="fab fa-fw fa-twitter"></i></a>
