@@ -7282,9 +7282,9 @@ h3 {
      }
   .masthead .masthead-subheading {
     font-size: 1.25rem; }
-  .masthead .masthead-avatar {
-    width: 15rem;
-     border-radius: 40px 40px 40px 40px}
+  .masthead .masthead-avatar{
+     width: 55rem;
+  border-radius: 40px 40px 40px 40px;}
 
 @media (min-width: 992px) {
   .masthead {
