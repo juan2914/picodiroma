@@ -20,35 +20,62 @@ require("./static/cabecera.php");
       <br>
 
       <p>Ingrese los datos mencionados</p>
-   </header>
+     </header>
    
     <div class="row"> 
-      <div class="col-md-5">
-     <input class="formu-input" id="user" type="text" placeholder="Usuario" required="true" autofocus="true">
+      <div class="col-md-6">
+     <input class="formu-input" style="width: 390px" id="calle" type="text" placeholder="Calle" required="true" autofocus="true">
       </div>
-     <br>
-      <br>
-
     </div>
-    <br>
+    
     <div class="row"> 
       <div class="col-md-5">
-     <input class="formu-input" id="name" type="text" placeholder="Nombre" required="true">
+     <input class="formu-input" id="colonia" type="text" placeholder="Colonia" required="true">
       </div>
       <div class="col-md-5">
-      <input class="formu-input" id="lastname" type="text" placeholder="Apellidos" required="true">
+      <input class="formu-input" id="c_p" type="text" placeholder="Codigo Postal" required="true">
      </div>
     </div>
-    <br>
-     <div class="row"> 
+    
+    
+   <div class="row"> 
+       <div class="col-md-5">
+       <input class="formu-input" id="delegacion" type="text" placeholder="Delegacion o municipio" required="true">
+       <br>
+       </div>
+   </div>
+
+    <div class="row"> 
       <div class="col-md-5">
-     <input class="formu-input" style="width: 410px" id="email" type="text" placeholder="Correo Electronico" required="true">
-     <br>
+     <input class="formu-input" style="width: 177px" id="date" type="date" placeholder="Nacimiento" required="true">
+      </div>
+      <div class="col-md-5">
+      <input class="formu-input" id="number" type="text" placeholder="Numero de telefono" required="true">
+     </div>
+    </div>
+ 
+
+      <div class="row" > 
+        <div class="col-md-5">
+       <input class="formu-input" id="passwoini" type="password" placeholder="Ingrese contraseña" required="true">
+         </div>
       </div>
 
-      
-  </div>
-  <button class="btn submits sign-up" type="submit">Validar</button> 
+      <div class="row">
+        <div class="col-md-5">
+      <input class="formu-input" id="confirpassword" type="password" placeholder="Confirma tu contraeña" required="true">
+        </div>
+    </div>
+
+  <div class="row"> 
+      <div class="col-md-5">
+    <button class="btn submits sign-up" onclick="location.href='registro.php'">Regresar  
+      </div>
+      <div class="col-md-5">
+      <button class="btn submits sign-up" onclick="location.href='registro.php'">Validar  
+     </div>
+    </div>
+ 
 
 </form>
 </div>

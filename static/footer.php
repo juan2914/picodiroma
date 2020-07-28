@@ -19,7 +19,7 @@
                     </div>
                     <!-- pie de paghina texto-->
                     <div class="col-lg-4">
-                        <h4 class="mb-4">ABOUT FREELANCER</h4>
+                        <h4 class="mb-4">PICODIROMA</h4>
                         <p class="pre-wrap lead mb-0">Contacto foñhgerhgophah</p>
                     </div>
                 </div>
