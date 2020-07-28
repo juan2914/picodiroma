@@ -462,7 +462,7 @@ pre {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px; } }
+    max-width:100px; } }
 
 .container-fluid, .container-xl, .container-lg, .container-md, .container-sm {
   width: 100%;
@@ -7170,7 +7170,8 @@ h3 {
     border-color: #dee2e6; } }
 
 .page-section {
-  padding: 6rem 0; }
+  padding: 0rem 0 ;
+ }
   .page-section .page-section-heading {
     font-size: 2.25rem;
     line-height: 2rem; }
@@ -7374,11 +7375,11 @@ h3 {
   color: #bbbbbb; }
 
 form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #e9ecef; }
+  border-top: 0px solid #e9ecef; }
 
 .footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
   background-color: #000000;
   color: #fff; }
 
@@ -7457,7 +7458,7 @@ opacity: .95;
 
 /* Start form  attributes */
 form {
-    width: 450px;
+    width: 500px;
     min-height: 500px;
     height: auto;
     border-radius: 5px;
@@ -7482,7 +7483,7 @@ form .con {
 
 /* the header form form */
 header {
-    margin: 2% auto 10% auto;
+    margin:  auto  auto;
     text-align: center;
 }
 /* Login title form form */
@@ -7503,10 +7504,10 @@ header p {letter-spacing: 0.05em;}
 .input-item {
     background: #fff;
     color: #333;
-    padding: 15px;
+    padding: 14.9px;
     border-radius: 5px 5px 5px 5px;
-      width: 250px;
-    height: 45px;
+    width: 1px;
+    height: 1px;
 }
 
 
@@ -7528,7 +7529,7 @@ input[class="form-input"]{
     border: none;
   
     border-radius: 5px 5px 5px 5px;
-    transition: 0.2s linear;
+    transition: 0.6s linear;
     
 }
 input[id="txt-input"] {width: 250px;}
@@ -7580,7 +7581,9 @@ button {
 /*     Sign Up button  */
 .sign-up {background: #ffffff;}
 
-
+.log-in{
+  width: 45%;
+}
 /* buttons hover */
 button:hover {
     transform: translatey(3px);
@@ -7588,6 +7591,26 @@ button:hover {
 }
 
 
+/* inputs form  */
+.formu-input{
+  
+    width: 200px;
+    height: 45px;
+   
+    margin-top: 5%;
+    padding: 15px;
+    
+    font-size: 12px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 5px 5px 5px 5px;
+    transition: 0.6s linear;
+    
+}
 
 
 

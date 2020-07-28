@@ -10,7 +10,6 @@ require("./static/cabecera.php");
         <header class="masthead bg-primary text-white text-center">
       
 
-          
            <div class="overlay">
 <!-- LOGN IN FORM by Omar Dsoky -->
 <form class="container col-md-6" action="validar.php" method="">
