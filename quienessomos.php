@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-   <?php
+<?php
 require("./static/cabecera.php");
 ?>
-
-
-    <body id="page-top">
-    
+   <body id="page-top">
+       
         <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                
+              
+               
+
+                <!-- titulo bajo el banner-->
+                <h1 class="masthead-heading mb-0">Pico Di roma </h1>
+                
+                <!-- Division-->
+                <div class="divider-custom divider-light">
+                    
+                    <div class="divider-custom-line"></div>
+                </div>
+             
+            </div>
+
             
    
         
@@ -31,16 +45,13 @@ require("./static/cabecera.php");
             </div>
         </section>
              </header> 
-
-           
+ 
+       
+       
         <?php
             require("./static/footer.php");
 
         ?>
-
-       
-
-
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
         <!-- Bootstrap core JS-->

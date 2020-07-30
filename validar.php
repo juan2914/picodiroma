@@ -22,27 +22,36 @@ require("./static/cabecera.php");
       <p>Ingrese los datos mencionados</p>
      </header>
    
-    <div class="row"> 
-      <div class="col-md-6">
-     <input class="formu-input" style="width: 390px" id="calle" type="text" placeholder="Calle" required="true" autofocus="true">
-      </div>
-    </div>
+     <div class="row"> 
+       <div class="col-md-5">
+       <input class="formu-input" id="calle" type="text" placeholder="Calle" required="true">
+       </div>
+       <div class="col-md-5">
+      <input class="formu-input" id="colonia" type="text" placeholder="Colonia" required="true">
+     </div>
+   </div>
     
     <div class="row"> 
       <div class="col-md-5">
-     <input class="formu-input" id="colonia" type="text" placeholder="Colonia" required="true">
+     <input class="formu-input" id="c_p" type="text" placeholder="Codigo Postal" required="true">
       </div>
-      <div class="col-md-5">
-      <input class="formu-input" id="c_p" type="text" placeholder="Codigo Postal" required="true">
+      <div class="col-md-2 mt-2" >
+      <input class="formu-input" style="width: 80px ;" id="num_int" type="text" placeholder="Num Int" required="true">
      </div>
+     <div class="col-md-2 mt-2">
+      <input class="formu-input" style="width: 80px ;" id="num_ext" type="text" placeholder="Num Ext" required="true">
+     </div>
+   </div>
     </div>
     
     
    <div class="row"> 
        <div class="col-md-5">
        <input class="formu-input" id="delegacion" type="text" placeholder="Delegacion o municipio" required="true">
-       <br>
        </div>
+       <div class="col-md-5">
+      <input class="formu-input" id="estado" type="text" placeholder="Estado" required="true">
+     </div>
    </div>
 
     <div class="row"> 
@@ -69,10 +78,10 @@ require("./static/cabecera.php");
 
   <div class="row"> 
       <div class="col-md-5">
-    <button class="btn submits sign-up" onclick="location.href='registro.php'">Regresar  
+    <button class="btn submits sign-up" style="width: 150px;" onclick="location.href='index.php'">Cancelar  
       </div>
       <div class="col-md-5">
-      <button class="btn submits sign-up" onclick="location.href='registro.php'">Validar  
+      <button class="btn submits sign-up" style="width: 150px;"onclick="location.href='registro.php'">Validar  
      </div>
     </div>
  
