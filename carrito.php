@@ -2,13 +2,18 @@
 <html lang="en">
    <?php
 require("./static/cabecera.php");
+
+
+
 ?>
 
 
     <body id="page-top">
       
+      
         <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">             
+            <div class="container d-flex align-items-center flex-column">  
+
                 <!-- titulo bajo el banner-->
                 <h1 class="masthead-heading mb-0">Galeria
                  <!-- Lineas divisoras-->
@@ -19,13 +24,16 @@ require("./static/cabecera.php");
                 </div>
                 <!-- Division-->
                
-                    
+         
                  
             </div>
    
 
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
+        
+        
+
                
                
                 <!-- Portfolio Grid Items-->
@@ -35,13 +43,33 @@ require("./static/cabecera.php");
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                   <!-- Imagenes -->
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="style/img/picopico.png" alt="Log Cabin"/>
+                                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="..." alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+                             
                         </div>
                     </div>
-                   
-                    
-                
+                 </div>
+            </div>    
+        
         </section>
              </header>
 
@@ -65,8 +93,15 @@ require("./static/cabecera.php");
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="style/img/picopico.png" alt="Log Cabin"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                    <div class="row">
+                                   <div class="col-md-6">
+                                    <button class="btn btn-primary mt-1" style="width: 150px" href="#" data-dismiss="modal">Galeria</button>
                                 </div>
+                                <div class="col-md-6">
+                                     <button class="btn btn-primary mt-1 pt-0" type="submit" style="width: 150px" onclick="location.href='venta.php'" >Agregar a carrito</button>
+                                 </div>
+                             </div>
+                               </div>
                             </div>
                         </div>
                     </div>

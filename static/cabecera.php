@@ -30,7 +30,7 @@
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a href="iniciosesion.php"><i class="fas fa-user-circle"></i></a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a href=""><i class="fab fa-opencart"></i></a>
+                        <li class="nav-item mx-0 mx-lg-1"><a href="venta.php"><i class="fab fa-opencart"></i></a>
                         </li>
 
                         <li class="nav-item mx-0 mx-lg-1">
