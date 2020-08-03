@@ -28,23 +28,46 @@
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a  href="#direccion">Contacto</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a href="iniciosesion.php"><i class="fas fa-user-circle"></i></a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a href="venta.php"><i class="fab fa-opencart"></i></a>
+                          <li class="nav-item mx-0 mx-lg-1"><a href="venta.php"><i class="fab fa-opencart"></i></a>
                         </li>
 
                         <li class="nav-item mx-0 mx-lg-1">
                             <div class="box">
                                 <div class="container-1">
                                 <span class="icon"><i class="fa fa-search"></i></span>
-                                <input type="search" id="search" placeholder="Busqueda..." />
-                            </div>
+                                <input type="search" style="width: 160px;" id="search" placeholder="Busqueda..." />
+                                </div>
+                            </div>  
+                             </ul>
+                        <ul class="navbar-nav">
                         </li>
-                        
-
-
+                        <?php 
+                        if(empty($_SESSION['user'])) { 
+                       ?>
+                        <li class="nav-item mx-0 mx-lg-1"><a href="iniciosesion.php"><i class="fas fa-user-circle"></i></a>
+                        </li>
+                        <?php
+                        }
+                        else {
+                        ?>
+                        <li class="nav-item mx-0 mx-lg-1 dropdown">
+                        <a class="nav-link drop down-toggle" data-toggle="dropdown" aria-hasup="true" aria-expande="false" > <?php
+                        echo ($_SESSION['user']['usuario']);  ?></a>  
+                        <div class="dropdown-menu dropdown-menu-right dropdown-default bg-secondary "style="color:#6c757d; " >
+                        <a class="dropdown-item "  href="">Mi perfil
+                        </a>    
+                        <a class="dropdown-item nav-item mx-0 mx-lg-1" href="">Mi Cuenta
+                        </a> 
+                        <a class="dropdown-item" href="../picodiroma/logout.php">Cerrar Sesion
+                        </a> 
+                         <?php
+                        }
+                        ?>                 
+                    
                        
-                    </ul>
-                </div>
+                         </div></li></ul>
+
             </div>
-        </nav>
+        </div>
+    </nav>
+                       

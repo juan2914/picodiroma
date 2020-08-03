@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <?php
+   require("./conexion.php");
 require("./static/cabecera.php");
 
 
