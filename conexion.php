@@ -13,7 +13,7 @@
     $Usuario="root"; 
     $password = ""; 
     $host = "localhost"; 
-    $dbname = "picodiroma"; 
+    $dbname = "pico_roma"; 
 
     // UTF-8 is a character encoding scheme that allows you to conveniently store 
     // a wide varienty of special characters, like ¢ or €, in your database. 
@@ -22,6 +22,7 @@
     // See Wikipedia for more information on UTF-8: 
     // http://en.wikipedia.org/wiki/UTF-8 
     $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+   
      
     // A try/catch statement is a common method of error handling in object oriented code. 
     // First, PHP executes the code within the try block.  If at any time it encounters an 
@@ -73,6 +74,15 @@
     // to have cookies enabled.  For more information about sessions: 
     // http://us.php.net/manual/en/book.session.php 
 session_start(); 
+ 
+if (isset($_SESSION['carrito'])){
+
+
+}
+else
+{
+  $_SESSION['carrito']=array();  
+}
 
     // Note that it is a good practice to NOT end your PHP files with a closing PHP tag. 
     // This prevents trailing newlines on the file from being included in your output, 

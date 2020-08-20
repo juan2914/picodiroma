@@ -1,143 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-   <?php
-   require("./conexion.php");
-require("./static/cabecera.php");
+<?php 
+require("./conexion.php"); 
+
+?>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Pico Di Roma</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Remember - v2.1.0
+  * Template URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<main>
 
 
+
+   <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i><a href="mailto:contact@example.com" style="color:#aca18c">hola@picodiroma.com</a>
+        <i class="icofont-phone"></i> 55 7155 1495
+      </div>
+      <div class="social-links">
+  
+        <a onclick="window.open('https://www.facebook.com/PicoDiRoma/')" class="facebook" style="font-size: 25px;"><i class="icofont-facebook"></i></a>
+        <a onclick="window.open('https://www.instagram.com/galeria_pico_di_roma/')" class="instagram" style="font-size: 25px;"><i class="icofont-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header"style="height: 7rem;">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light" ><a href="index.php" ><img src="assets\img\portfolio\pico.logo.png" ></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block mt-3" >
+        <ul>
+          <li><a href="index#about" style="font-size: 20px;">Nosotros</a></li>
+          <li><a href="index.php#portfolio"style="font-size: 20px;">Cuadros</a></li>
+          <li><a href="#contact"style="font-size: 20px;">Contacto</a></li>
+         <?php if(empty($_SESSION['user'])) {
+        
+         
+         ?>
+          <li class="drop-down" ><a style="font-size: 20px;">Inicio de sesion<i class="fab fa-500px"></i></a>
+            <ul>
+              <li><a href="login" style="font-size: 20px;">Ingresar</a></li>
+             
+              <li><a href="register" style="font-size: 20px;">Registrar</a></li>
+              
+            </ul>
+          </li>
+          <?php } else {
+
+            ?>
+            <li class="drop-down" style="font-size: 20px;"><a style="font-size: 20px;"><?php echo $_SESSION['user']['usuario'] ?></a>
+            <ul>
+              <li><a href="informacion" style="font-size: 20px;">Perfil</a></li>
+             
+              <li><a style="font-size: 20px;">Carrito</a></li>
+              <li><a href="salir.php" style="font-size: 20px;">Cerrar sesion</a></li>
+            </ul>
+          </li>
+          <?php } ?>
+<li><a href="carrilleno" style="font-size: 20px;">Carrito de compra</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+ 
+
+
+
+
+  
+        <?php
+
+         $query = " 
+        SELECT 
+        id_producto,
+         (SELECT nombre FROM cuadro where id_cuadro = (SELECT id_cuadro FROM producto WHERE id_cuadro= US.id_cuadro  )) AS nombre,
+         (SELECT descripcion FROM cuadro where id_cuadro = (SELECT id_cuadro FROM producto WHERE id_cuadro= US.id_cuadro  )) AS descripcion,
+         (SELECT imagen FROM cuadro where id_cuadro = (SELECT id_cuadro FROM producto WHERE id_cuadro= US.id_cuadro  )) AS imagen,
+
+      
+
+         (SELECT precio FROM precio where id_precio = (SELECT id_precio FROM producto WHERE id_precio= US.id_precio  )) AS precio
+
+
+              FROM producto US where id_producto = ".$_GET['var'] ."; 
+                         "; 
+        try 
+        { 
+            // Execute the query against the database 
+            //genera un dato en lenguaje sql
+            $stmt = $db->prepare($query);
+            //ejecutar la consulta y devuelve unavariable 
+            $stmt->execute(); 
+        } 
+        //error almomento de ejecutar el query
+        catch(PDOException $ex) 
+        { 
+          
+           die("Failed to run query: " . $ex->getMessage()); 
+        } 
+
+  $rows=$stmt->fetch();
+     
 
 ?>
 
 
-    <body id="page-top">
-      
-      
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">  
+            
+  
 
-                <!-- titulo bajo el banner-->
-                <h1 class="masthead-heading mb-0">Galeria
-                 <!-- Lineas divisoras-->
-              <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Division-->
-               
-         
-                 
+
+       
+       
+
+
+
+
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="form-row">
+         <div class="col-md-6">
+         <div class="portfolio-details-container">
+             
+                 <div class="owl-carousel portfolio-details-carousel">
+                 <img class="img-fluid" alt="" src=<?php echo $rows['imagen'];?> >
+                 <img src="assets/img/portfolio-details-2.jpg" class="img-fluid" alt="">
+                 </div>    
+             
+          </div>
+          </div>
+
+          <div class="col-md-6 ">
+          <div class="">
+              <br><br>  
+              <h1><?php echo $rows['nombre'];?></h1>
+           <hr>
+             
+              <p>   <?php echo $rows['descripcion'];?>  </p>          
+            
+            
+            <div class="btn-group" role="group disable" aria-label="Third group" >
+            <button type="button" class="btn btn-secondary" disabled="true" style="background-color: #ccb598;border-color: #ccb598;" >1 /   10 </button>
             </div>
-   
+           
+            <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary"  onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;" > 2 / 10 </button>
+            </div>
+          
+            <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary" onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;"> 3 / 10 </button>
+            </div>
+              <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary" onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;"> 4 / 10 </button>
+            </div>
+             <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary" onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;"> 5 / 10 </button>
+            </div>
+              </div>
+              <br>
+              
+             
+            <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary" onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;"> 6 / 10 </button>
+            </div>
+               <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary" onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;"> 7 / 10 </button>
+            </div>
+               <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary" onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;"> 8 / 10 </button>
+            </div>
+               <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary" onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;"> 9 / 10 </button>
+            </div>
+               <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary" onclick="carritolleno(<?php echo $rows['id_producto']; ?>)" style="background-color: #ccb598;border-color: #ccb598;"> 10 / 10 </button>
+            </div>
+           
 
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-        
-        
-
-               
-               
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Imagenes de la galeria-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                  <!-- Imagenes -->
-                                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
+            </div>
+          </div>
+          </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-                             
-                        </div>
-                    </div>
-                 </div>
-            </div>    
-        
-        </section>
-             </header>
 
-        <!-- seccion de la venta-->
-        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    </section>
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Titulo de la mercancia</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="style/img/picopico.png" alt="Log Cabin"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <div class="row">
-                                   <div class="col-md-6">
-                                    <button class="btn btn-primary mt-1" style="width: 150px" href="#" data-dismiss="modal">Galeria</button>
-                                </div>
-                                <div class="col-md-6">
-                                     <button class="btn btn-primary mt-1 pt-0" type="submit" style="width: 150px" onclick="location.href='venta.php'" >Agregar a carrito</button>
-                                 </div>
-                             </div>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      
-        
-        
-        
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-               
+    <!-- ======= Portfolio Details Section ======= -->
 
+ 
+  </main><!-- End #main -->
 
+<?php require('./static/footer.php'); ?>
 
-     
-        
-        </section>
+  <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
 
-        <?php
-            require("./static/footer.php");
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
 
-        ?>
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
