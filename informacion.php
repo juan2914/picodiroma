@@ -116,7 +116,7 @@ if(empty($_SESSION['user']))
 
       <nav class="nav-menu d-none d-lg-block mt-3" >
         <ul>
-         
+           <li><a href="index#about" style="font-size: 20px;">Nosotros</a></li>
           <li><a href="index#portfolio"style="font-size: 20px;">Cuadros</a></li>
           <li><a href="#contact"style="font-size: 20px;">Contacto</a></li>
          <?php if(empty($_SESSION['user'])) {

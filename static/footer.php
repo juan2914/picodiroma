@@ -1,6 +1,7 @@
     
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+      <HR>
+        <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-in">
@@ -22,7 +23,7 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>hola@picodiroma.com</p>
+                  <a href="mailto:contact@example.com">hola@picodiroma.com</a>
               </div>
 
               <div class="phone">
@@ -39,7 +40,7 @@
 
 
 
-          <iframe style="border:0; width: 640px; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6778420968203!2d-99.17260588578172!3d19.426320645916842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff4a2d6d054f%3A0x62de88ea41dad48!2sAv.%20Paseo%20de%20la%20Reforma%20393%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%2006500%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1597780402245!5m2!1ses-419!2smx"></iframe>
+          <iframe style="border:0; width: 50px height:50%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6778420968203!2d-99.17260588578172!3d19.426320645916842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff4a2d6d054f%3A0x62de88ea41dad48!2sAv.%20Paseo%20de%20la%20Reforma%20393%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%2006500%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1597780402245!5m2!1ses-419!2smx"></iframe>
         </div>
 
           </div>

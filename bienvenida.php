@@ -84,9 +84,8 @@ require("./conexion.php");
             $_SESSION['user'] = $row; 
              
             // Redirect the user to the private members-only page. 
-            header("Location: index"); exit();
+            header("Location: index"); 
             die("Redirecting to: index"); 
-            
         } 
         else 
         { 
@@ -98,7 +97,7 @@ require("./conexion.php");
             echo 'alert("usuario o contraseña incorrecta")'; 
             echo '</script>';
        
-              header("Location: .login"); 
+              header("Location: login"); 
             die("Redirecting to: login");            
              
             // Show them their username again so all they have to do is enter a new 

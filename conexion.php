@@ -73,7 +73,7 @@
     // note that in most cases sessions do still use cookies and require the visitor 
     // to have cookies enabled.  For more information about sessions: 
     // http://us.php.net/manual/en/book.session.php 
-session_start(); 
+ 
  
 if (isset($_SESSION['carrito'])){
 
@@ -84,6 +84,7 @@ else
   $_SESSION['carrito']=array();  
 }
 
-    // Note that it is a good practice to NOT end your PHP files with a closing PHP tag. 
+session_start();   
+ // Note that it is a good practice to NOT end your PHP files with a closing PHP tag. 
     // This prevents trailing newlines on the file from being included in your output, 
     // which can cause problems with redirecting users.

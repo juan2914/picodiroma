@@ -237,19 +237,19 @@ $total=$total+$rows['precio'];
       <div class="container">
 
 
-        <div class="row">
-          <div class="col-md-6 col-left">
-            <div class="border p-4 rounded">
-               Seguir comprando<a href="index.php#cuadros " title=""> Click aqui</a> 
+          <div class="row">
+            <div class="col-md-6 col-left">
+              <div class="border p-3 rounded">
+                 Seguir comprando<a href="index.php#cuadros " title=""><strong> Click aqui</strong></a> 
+              </div>
+              </div>
+              <div class="col-md-6 col-right">
+                  <div class="border p-3 rounded">
+                <a style="" href="limpiarcarrito.php" ><strong>Vaciar carrito</strong></a>
+              </div>
             </div>
-            </div>
-            <div class="col-md-6 col-right">
-                <div class="border p-4 rounded">
-              <a style="" href="limpiarcarrito.php" >Vaciar carrito</a>
-            </div>
+            
           </div>
-          
-        </div>
 
 
 
@@ -262,9 +262,7 @@ $total=$total+$rows['precio'];
                 <h2 class="h3 mb-3 text-black">Tu Cuenta</h2>
                 <div class="p-3 p-lg-5 border">
                   <table class="table site-block-order-table mb-5">
-                    <thead>
-                     
-                    </thead>
+                
                     <tbody>
                      
                     
@@ -289,9 +287,12 @@ $total=$total+$rows['precio'];
                   <div class="form-group">
                     <button class="btn btn-primary btn-lg py-3 btn-block" style="background-color: red;border-color: red;" onclick="window.location='checkout?id_precio=<?php echo $total ?>'" >RealizarPedido</button>
                   </div>
-     </div>
-              
-              </div>
+                   </div>
+                 </div>
+            
+
+
+
             </div>
 
         

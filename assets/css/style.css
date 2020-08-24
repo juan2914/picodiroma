@@ -1,4 +1,4 @@
-/**
+                /**
 * Template Name: Remember - v2.1.0
 * Template URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
 * Author: BootstrapMade.com
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 #topbar {
   background: #fff;
   padding: 10px 0;
-  font-size: 14px;
+
   color: #aca18c;
 }
 
@@ -252,6 +252,7 @@ h1, h2, h3, h4, h5, h6 {
     content: "\ea9d";
   }
 }
+  outline: none !important;
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
@@ -263,7 +264,6 @@ h1, h2, h3, h4, h5, h6 {
   background: none;
   font-size: 24px;
   transition: all 0.4s;
-  outline: none !important;
   line-height: 1;
   cursor: pointer;
   text-align: right;
@@ -937,7 +937,7 @@ section {
 }
 
 .team .member .social {
-  position: absolute;
+  position: ;
   left: 0;
   bottom: 30px;
   right: 0;
@@ -965,7 +965,7 @@ section {
 }
 
 .team .member .social i {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .team .member .member-info {
@@ -1740,3 +1740,71 @@ color: black;
     background-color: #e9ecef;
     border-color: #dee2e6;
 }
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #ccc;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #aca18c;
+    border-color: #d8c2a6;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #d8c2a6;
+    border-color: #aca18c;
+}
+.btn-primary:hover {
+    color: #fff;
+     background-color: #d8c2a6;
+    border-color: #aca18c;
+}
+
+.border {
+    border: 1px solid #aca18c!important;
+}
+
+
+.table td, .table th, .table thead {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #aca18c;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid  #aca18c;
+}
+
+.table-bordered thead th {
+    border-bottom-width: 1px;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #aca18c;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #aca18c;
+}
+
+.mobile-nav-toggle .d-lg-none{
+display: none;
+}
+
+@media screen and (max-width:360px){
+.mobile-nav-toggle i {
+display:block ;
+ }
+  }
+
+ 

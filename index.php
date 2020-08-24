@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-   <link rel="shortcut icon" href="assets\img\portfolio\pico.logo.png" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="shortcut icon" href="assets\img\portfolio\pico.logo.png" />
   <title>Pico Di Roma</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
@@ -14,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css" integrity="sha512-AMDXrE+qaoUHsd0DXQJr5dL4m5xmpkGLxXZQik2TvR2VCVKT/XRPQ4e/LTnwl84mCv+eFm92UG6ErWDtGM/Q5Q==" crossorigin="anonymous" />
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -33,12 +34,21 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+  <!-- =======================================================
+  * Template Name: Remember - v2.1.0
+  * Template URL: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 <body>
+<?php 
+require("./conexion.php");   
+
+?>
 
 
-
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-none d-lg-block" class="home">
+   <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
         <i class="icofont-envelope"></i><a href="mailto:contact@example.com" style="color:#aca18c">hola@picodiroma.com</a>
@@ -54,19 +64,18 @@
 
   <!-- ======= Header ======= -->
   <header id="header"style="height: 7rem;">
-    
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <h1 class="text-light" ><a href="index" ><img src="assets\img\portfolio\pico.logo.png" ></a></h1>
+        <h1 class="text-light" ><a href="index.php" ><img src="assets\img\portfolio\pico.logo.png" ></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block mt-3" >
         <ul>
-          <li><a href="#about" style="font-size: 20px;">Nosotros</a></li>
-          <li><a href="#portfolio"style="font-size: 20px;">Cuadros</a></li>
+          <li><a href="index#about" style="font-size: 20px;">Nosotros</a></li>
+          <li><a href="index#portfolio"style="font-size: 20px;">Cuadros</a></li>
           <li><a href="#contact"style="font-size: 20px;">Contacto</a></li>
          <?php if(empty($_SESSION['user'])) {
         
@@ -83,11 +92,11 @@
           <?php } else {
 
             ?>
-            <li class="drop-down" style="font-size: 20px;"><a style="font-size: 20px;"><?php echo $_SESSION['user']['usuario'] ?></a>
+            <li class="drop-down" style="font-size: 20px;"><a  style="font-size: 20px;"><?php echo $_SESSION['user']['usuario'] ?></a>
             <ul>
               <li><a href="informacion" style="font-size: 20px;">Perfil</a></li>
              
-              <li><a href="carrilleno" style="font-size: 20px;">Carrito</a></li>
+              <li><a href="carrilleno"  style="font-size: 20px;">Carrito</a></li>
               <li><a href="salir.php" style="font-size: 20px;">Cerrar sesion</a></li>
             </ul>
           </li>
@@ -100,7 +109,7 @@
   </header><!-- End Header -->
 
 <?php  
-require('./conexion.php');
+
 if (empty($_GET['pagina'])){
   header('location: index?pagina=1'); 
 }
@@ -108,7 +117,7 @@ if (empty($_GET['pagina'])){
 
 ?>
 
-<body>
+
   
    <section class="testimonials ">
       <div class="container">
@@ -257,7 +266,7 @@ Los valores de nuestra empresa son:<ul>
          (SELECT precio FROM precio where id_precio = (SELECT id_precio FROM producto WHERE id_precio= US.id_precio  )) AS precio
 
 
-             FROM producto US 
+             FROM producto US limit $iniciar,$articulo_x_pagina
                          "; 
         try 
         { 

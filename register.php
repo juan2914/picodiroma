@@ -86,11 +86,11 @@ require("./conexion.php");
           <?php } else {
 
             ?>
-            <li class="drop-down" style="font-size: 20px;"><a><?php echo $_SESSION['user']['usuario'] ?></a>
+            <li class="drop-down" style="font-size: 20px;"><a style="font-size: 20px;"><?php echo $_SESSION['user']['usuario'] ?></a>
             <ul>
               <li><a href="informacion" style="font-size: 20px;">Perfil</a></li>
              
-              <li><a>Carrito</a></li>
+              <li><a href="carrilleno" style="font-size: 20px;">Carrito</a></li>
               <li><a href="salir.php" style="font-size: 20px;">Cerrar sesion</a></li>
             </ul>
           </li>

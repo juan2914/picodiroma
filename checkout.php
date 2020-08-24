@@ -115,7 +115,7 @@ require("./conexion.php");
             <?php if( empty($_SESSION['user'])) 
     { 
       ?>
-  Ya tienes cuenta? <a href="login.php">Click aqui</a> para ingresar
+  Ya tienes cuenta? <a href="login.php"><strong> Click aqui </strong></a> para ingresar
             </div>
           </div>
         </div>
